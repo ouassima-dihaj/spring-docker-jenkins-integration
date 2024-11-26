@@ -1,3 +1,4 @@
 FROM openjdk:17
-ADD target/spring-devops.jar spring-devops.jar
-ENTRYPOINT ["java","-jar","/spring-devops.jar"]
+EXPOSE 8080
+ADD target/docker-jenkins-integration.jar docker-jenkins-integration.jar
+ENTRYPOINT ["java","-jar","/docker-jenkins-integration.jar"]
